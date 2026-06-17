@@ -31,4 +31,6 @@ int main (){
     resultado /= numero;
     printf("\nResultado = %d", resultado);
     resultado = numero; //resetando os valores iniciais
+    
+    return 0;
 }

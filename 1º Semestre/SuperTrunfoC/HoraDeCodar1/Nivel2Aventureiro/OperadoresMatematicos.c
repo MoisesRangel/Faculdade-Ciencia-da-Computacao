@@ -21,4 +21,6 @@ int main (){
 
     resultado = numero1 / numero2;
     printf("\n%d / %d = %d", numero1, numero2, resultado);
+
+    return 0;
 }
