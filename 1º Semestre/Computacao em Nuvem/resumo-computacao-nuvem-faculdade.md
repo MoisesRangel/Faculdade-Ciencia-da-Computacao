@@ -46,6 +46,99 @@ Analogia da pizza:
 - **Provedores de serviço** — desenvolvem e disponibilizam serviços aos usuários via interfaces baseadas na internet, usando a infraestrutura de terceiros.
 - **Usuários da nuvem** — consomem os serviços disponibilizados.
 
+### Modelos de Serviço — Aprofundamento e Responsabilidade Compartilhada
+
+**A "escada da responsabilidade":** quanto mais pronto o serviço chega, menos trabalho (e menos controle) você tem sobre ele.
+
+```
+On-Premises → IaaS → PaaS → SaaS
+(você faz tudo)              (o provedor faz tudo)
+```
+
+Analogia da festa de 15 anos:
+
+| Modelo | O que vem pronto | O que você ainda organiza |
+|---|---|---|
+| **On-premises** | Nada — a festa é na sua casa | Tudo: salão, buffet, decoração, DJ, cerimonialista, foto, vestido, maquiagem |
+| **IaaS** | Só o salão de festas | Buffet, decoração, DJ, cerimonialista, foto, vestido, maquiagem |
+| **PaaS** | Salão + buffet + decoração + DJ + cerimonialista | Foto/filmagem, vestido, maquiagem |
+| **SaaS** | Tudo incluso | Só aparecer e aproveitar |
+
+(Mesma lógica da analogia da pizza do início do Tema 2 — só que aplicada a um evento.)
+
+**Modelo de Responsabilidade Compartilhada** (quem gerencia cada camada):
+
+| Camada gerenciada | On-premises | IaaS | PaaS | SaaS |
+|---|:---:|:---:|:---:|:---:|
+| Dados e aplicação | Cliente | Cliente | Cliente | **Provedor** |
+| Runtime / Middleware | Cliente | Cliente | **Provedor** | Provedor |
+| Sistema Operacional | Cliente | Cliente | Provedor | Provedor |
+| Virtualização | Cliente | **Provedor** | Provedor | Provedor |
+| Servidores / Storage / Rede física | Cliente | Provedor | Provedor | Provedor |
+
+⚠️ **Pegadinha de prova:** mesmo em SaaS, a segurança dos **dados e das configurações de acesso** continua sendo, em grande parte, responsabilidade do **usuário/cliente** — não é 100% do provedor.
+
+### Outros Modelos "as a Service"
+
+| Sigla | Nome completo | O que oferece | Exemplo |
+|---|---|---|---|
+| **DRaaS** | Disaster Recovery as a Service | Replicação de servidores, dados e aplicações para recuperação de desastres | Backup automático em ambiente espelho |
+| **CaaS** | Communication as a Service | Comunicação via nuvem: VoIP, mensagens, streaming de vídeo | Zoom, Microsoft Teams |
+| **FaaS** | Function as a Service | Execução de funções sob demanda, sem gerenciar servidor | AWS Lambda, Azure Functions |
+| **DBaaS** | Database as a Service | Banco de dados gerenciado pelo provedor | Amazon RDS, Firebase |
+| **MaaS** | Ambíguo — ver observação | — | — |
+
+⚠️ **Nota de terminologia — MaaS é ambíguo:** pode significar *Monitoring as a Service* (o mais comum em nuvem corporativa), *Mobility as a Service* (smart cities/transporte) ou *Malware as a Service* (termo de cibercrime, não é um modelo de nuvem comercial legítimo). Se aparecer em prova sem contexto, confirmar com o professor qual definição está sendo cobrada.
+
+### Modelos de Implantação — Aprofundamento: Pública e Privada
+
+**Diferença entre modelo de Serviço e modelo de Implantação:**
+
+| Pergunta que o modelo responde | Categoria |
+|---|---|
+| "Quem gerencia o quê" (infra, plataforma, aplicação) | Modelo de **Serviço** → IaaS, PaaS, SaaS |
+| "Onde a nuvem está e quem pode acessá-la" | Modelo de **Implantação** → Pública, Privada, Comunitária, Híbrida |
+
+Analogia: modelo de serviço é escolher se a casa vem mobiliada, semimobiliada ou vazia. Modelo de implantação é escolher se essa casa fica num condomínio compartilhado (pública) ou num terreno só seu (privada). São perguntas independentes — dá pra ter IaaS numa nuvem pública OU numa nuvem privada.
+
+#### Nuvem Pública
+"Condomínio" gigante na internet: o provedor (AWS, Azure, GCP) constrói e mantém tudo, qualquer empresa "aluga um apartamento" (recursos) e paga pelo uso. Usuário tem **menos controle** sobre os dados.
+
+| Vantagens | Desvantagens |
+|---|---|
+| Preço diluído entre milhares de clientes | Segurança — infraestrutura compartilhada (multi-tenancy) |
+| Facilidade de contratação e configuração | Controle é do provedor, não do usuário |
+| Escalabilidade — dobrar/triplicar recursos em minutos | Requisitos legais — dados podem ficar hospedados em outro país (leis diferentes) |
+| Boa performance | — |
+
+#### Nuvem Privada
+"Casa isolada com muro só seu": infraestrutura dedicada a uma única empresa, ninguém mais compartilha.
+
+⚠️ **Terminologia importante:** nuvem privada **não é sinônimo de on-premises**.
+- **On-premises** = hardware fica fisicamente dentro da empresa.
+- **Off-premises** = hardware fica em datacenter de terceiros, mas de uso **exclusivo** — ainda é considerada nuvem privada.
+- O que define "privada" é a **exclusividade de uso**, não a localização física.
+
+| Vantagens | Desvantagens |
+|---|---|
+| Disponibilidade maior (sem concorrência por recursos) | Custo inicial alto (compra, instalação, configuração de hardware) |
+| Customização sob medida | Exige equipe de TI própria/especializada |
+| Suporte exclusivo, mais ágil | — |
+| Segurança — monitoramento dedicado, anomalias mais evidentes | — |
+
+Uso típico: dados muito sensíveis (financeiro, saúde, governo) ou exigências regulatórias rígidas.
+
+**Tabela-síntese:**
+
+| Critério | Nuvem Pública | Nuvem Privada |
+|---|---|---|
+| Compartilhamento de infraestrutura | Sim (multi-tenant) | Não (uso exclusivo) |
+| Controle do usuário | Baixo | Alto |
+| Custo inicial | Baixo | Alto |
+| Escalabilidade | Muito alta | Limitada à infra própria |
+| Localização | Sempre off-premises (do provedor) | On-premises ou off-premises |
+| Exemplo | AWS, Azure, GCP | Datacenter dedicado de um banco |
+
 ---
 
 <!-- Próximo tema será adicionado abaixo desta linha -->
