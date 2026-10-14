@@ -1,0 +1,19 @@
+"""
+5+2 == 7    Soma
+5-2 == 3    Subtração
+5*2 == 10   Multiplicação
+5/2 == 2.5  Divisão
+5**2 == 25  Potenciação
+5//2 == 2   Divisão inteira
+5%2 == 1     Resto da divisão/ Modulo
+
+Ordem de precedência
+1º ()
+2º **
+3º * / // %
+4º + -
+
+Ex: 5+3*2 == 5+6 == 11
+Ex: 3*5+4**2 == 3*5+16 == 15+16 == 31
+Ex: 3*(5+4)**2 == 3*81 == 243
+"""
