@@ -6,51 +6,53 @@
     </head>
 
     <body>
-        <fieldset>
-            <legend>Dados Gerais</legend>
-            <label for="nome">Nome:</label>
-            <input type="text" minlength="3" id="nome"/>
+        <form action="/pagina_processa_dados_do_form" method="post">
+            <fieldset>
+                <legend>Dados Gerais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" minlength="3" id="nome"/>
 
-            <label for="data_nascimento">Data de nascimento:</label>
-            <input type="text" id="data_nascimento">
+                <label for="data_nascimento">Data de nascimento:</label>
+                <input type="date" id="data_nascimento" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="DD/MM/AAAA" required>
 
-            <label for="cpf">CPF:</label>
-            <input type="cpf" minlength="11" id="cpf"/>
-        </fieldset>
+                <label for="cpf">CPF:</label>
+                <input type="cpf" minlength="11" id="cpf"/>
+            </fieldset>
 
-        <fieldset>
-            <legend>Endereço</legend>
-            
-            <label for="tipo_endereco">Tipo:</label>
-            <select id="tipo_endereco">
-                <option value="">Selecione</option>
-                <option value="">Rua</option>
-                <option value="">Estrada</option>
-                <option value="">Rodovia</option>
-                <option value="">Outros</option>
-            </select>
+            <fieldset>
+                <legend>Endereço</legend>
+                
+                <label for="tipo_endereco">Tipo:</label>
+                <select id="tipo_endereco">
+                    <option value="">Selecione</option>
+                    <option value="">Rua</option>
+                    <option value="">Estrada</option>
+                    <option value="">Rodovia</option>
+                    <option value="">Outros</option>
+                </select>
 
-            <label for="logradouro_endereco">Logradouro:</label>
-            <input type="text" id="logradouro_endereco" />
+                <label for="logradouro_endereco">Logradouro:</label>
+                <input type="text" id="logradouro_endereco" />
 
-            <label for="numero_endereco">Número:</label>
-            <input type="text" id="numero_endereco" />
+                <label for="numero_endereco">Número:</label>
+                <input type="text" id="numero_endereco" />
 
-            <label for="complemento_endereco">Complemento:</label>
-            <input type="text" id="complemento_endereco" />
-        </fieldset>
+                <label for="complemento_endereco">Complemento:</label>
+                <input type="text" id="complemento_endereco" />
+            </fieldset>
 
-        <fieldset>
-            <legend>Fale conosco</legend>
+            <fieldset>
+                <legend>Fale conosco</legend>
 
-            <label for="msg">Mensagem:</label>
-            <textarea type="text" id="msg"></textarea>
-        </fieldset>
+                <label for="msg">Mensagem:</label>
+                <textarea type="text" id="msg"></textarea>
+            </fieldset>
 
-        <fieldset>
-            <button type="submit">Enviar sua mensagem</button>
-            <button type="reset">Limpar o Formulário</button>
-        </fieldset>
+            <fieldset>
+                <button type="submit">Enviar sua mensagem</button>
+                <button type="reset">Limpar o Formulário</button>
+            </fieldset>
+        </form>
     </body>
 
     </html>
