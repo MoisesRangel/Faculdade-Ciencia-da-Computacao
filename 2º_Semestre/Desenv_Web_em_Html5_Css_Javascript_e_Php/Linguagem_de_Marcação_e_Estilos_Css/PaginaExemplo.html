@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- CSS Externa -->
+     <link rel="stylesheet" href="css_em_paginas-web.css">
+
+     <!-- CSS Interna -->
+      <style>
+        p {
+            text-align: center;
+            color: blue;
+            font-size: 30px;
+            padding-top: 10px; /*Formato individual de definição*/
+            padding-bottom: 10px;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        #para1 {
+            color: green;
+            padding: 10px 5px 10px 5px /*Formato abreviado de definição*/
+        }
+
+        .elemento-com-borda {
+            border: 3px solid #ffcc00;
+            padding: 10px;
+        }
+
+        .cascata {
+            background-color: grey;
+        }
+
+        #para2 {
+            background-color: orange;
+        }
+
+        .gradient {
+            font-weight:bold;
+            font-size:4rem;
+            width: 400px;
+            height: 300px;
+            background: linear-gradient(red, yellow);
+            margin: 20px 30px;
+        }
+      </style>
+    </head>
+
+    <body>
+        <h1 style="color:blue;text-align:center;font-size:5rem">Sou um titulo CSS Inline</h1>
+        
+        <p>Ao utilizar o seletor de elementos, todos os elementos serão afetados pelo estilo</p>
+
+        <p id="para1">Sou um paragrafo que mesmo tendo um ID, sou afetado pelo estilo aplicado via seletor e também pelo estilo aplicado via ID</p>
+
+        <h2 class="elemento-com-borda">Subtitulo com classe utilizada também em outro elemento</h2>
+
+        <div class="elemento-com-borda cascata">
+            <p id="para2">Oi, não se esqueça de mim. Mesmo estando dentro de um outro elemento, sou afeto pelo estilo aplicado via seletor.</p>
+        </div>
+
+        <div class="gradient">
+            Sou uma DIV estilizada com CSS3
+        </div>
+    
+    </body>
+</html>
