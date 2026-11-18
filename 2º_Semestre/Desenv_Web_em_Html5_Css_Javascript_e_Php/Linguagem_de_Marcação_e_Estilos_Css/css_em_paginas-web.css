@@ -1,0 +1,16 @@
+#container {
+    background-color: #ccc;
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.texto-destaque {
+    font-weight: bold;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 5px;
+    display: inline;
+}
