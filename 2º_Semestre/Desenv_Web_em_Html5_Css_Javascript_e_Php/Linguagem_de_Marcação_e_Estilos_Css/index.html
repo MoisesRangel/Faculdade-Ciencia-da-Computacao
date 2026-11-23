@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Laboratório prático de CSS3</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Laboratório de Propriedades CSS3</h1>
+
+        <!-- 1. Cores e Transparência-->
+         <section class="bloco">
+            <h2>1. Cores (Hex, RGBa e HSLa)</h2>
+            <div class="comparacao">
+                <div class="caixa">Sem cor de fundo (padrão transparente)</div>
+                <div class="caixa cor-hex">Fundo Hexadecimal</div>
+                <div class="caixa cor-rgba">Fundo RGBa com 50% de transparência</div>
+                <div class="caixa cor-hsl">Fundo HSL (Matiz 200, Saturação 70%, Luz 45%)</div>
+            </div>
+         </section>
+        <!-- 2. Border X Outline-->
+         <section class="bloco">
+            <h2>2. Border (ocupa espaço) vs Outline (flutua por fora)</h2>
+            <div class="comparacao">
+                <span class="etiqueta">Sem borda</span>
+                <span class="etiqueta com-border">Com borda (empurra os vizinhos)</span>
+                <span class="etiqueta com-outline">Com outline (Não empurra ninguem)</span>
+            </div>
+         </section>
+         <!-- 3. Alinhamento de texto-->
+         <section class="bloco">
+            <h2>3. Alinhamento (text-align)</h2>
+            <div class="comparacao">
+                <p class="caixa">Padrão (left): o texto fica alinhado à esquerda</p>
+                <p class="caixa texto-centro">Center: o texto fica centralizado na caixa</p>
+                <p class="caixa texto-direita">Right: o texto encosta na direita</p>
+                <p class="caixa texto-justificado">Justify: o texto estica as palavras para encostar tanto na margem esquerda quanto na direita, igual a uma coluna de jornal impresso.</p>
+            </div>
+         </section>
+         <!--4. Espaçamento (Line, Letter e Word Spacing)-->
+         <section class="bloco">
+            <h2>4. Espaçamento de texto</h2>
+            <div class="comparacao">
+                <p class="caixa"><strong>Padrão do navegador:</strong><br>
+                Observe como as linhas, as letras e as palavras ficam próximas umas das outras no comportamento padrão sem ajustes</p>
+                <p class="caixa texto-espacado">
+                    <strong>
+                        Com line-height (1.8), letter-spacing (2px) e wordspacing (8px):
+                    </strong><br>
+                    Observe como o texto ganha respiro vertical entre as linhas e afastamento horizontal entre as letras e palavras.
+                </p>
+            </div>
+         </section>
+         <!-- 5. Familia, Tamanho, estilo e peso da fonte-->
+          <section class="bloco">
+            <h2>5. Tipografia (Fontes)</h2>
+            <div class="comparacao">
+                <p class="caixa">
+                    Texto padrão: Fonte com serifa padrão do navegador, tamanho normal (16px), peso normal.
+                </p>
+                <p class="caixa fonte-customizada">
+                    Texto estilizado: font-family sem serifa (Arial), font-size maior (20px), font-weight negrito (700) e font-style itálico.
+                </p>
+            </div>
+          </section>
+    </body>
+</html>

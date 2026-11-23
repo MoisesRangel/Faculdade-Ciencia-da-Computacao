@@ -14,3 +14,25 @@ ul li {
     margin-bottom: 5px;
     display: inline;
 }
+
+#container2{
+    background-color: #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+
+#rgb {
+    background-color: rgb(255,0,51);
+}
+
+#rgba {
+    background-color: rgba(255,0,51,0.4);
+}
+
+#hsl {
+    background-color: hsl(0,100%,50%);
+}
+
+#hsla {
+    background-color: hsl(0,100%,50%,40%);
+}
