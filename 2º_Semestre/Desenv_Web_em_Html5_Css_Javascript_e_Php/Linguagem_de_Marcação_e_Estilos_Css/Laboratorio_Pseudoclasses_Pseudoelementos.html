@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Laboratório: Pseudoclasses e Pseudoelementos</title>
+        <link rel="stylesheet" href="Laboratorio_Pseudoclasses_Pseudoelementos_style.css">
+    </head>
+    <body>
+        <h1>Laboratório: Pseudoclasses (:) e Pseudoelementos (::)</h1>
+        
+        <section class="bloco">
+            <h2>1. Pseudoclasses de Interação (:hover e :active)</h2>
+            <div class="caixa-hover"> Passe o mouse aqui dentro (div:hover)</div>
+            <br>
+            <a href="#topo" class="botao-link">Passe o mouse e SEGURE o clique aqui (a:active)</a>
+        </section>
+
+        <section class="bloco">
+            <h2>2. Pseudoclasse de Estado (>checked)</h2>
+            <div>
+                <input type="checkbox" id="task1">
+                <label for="task1">Marcar tarefa como concluida (input:checked + label)</label>
+            </div>
+        </section>
+
+        <section class="bloco">
+            <h2>3. Pseudoclasses estruturais (:first-child e : last-child)</h2>
+            <ul class="lista-exemplo">
+                <li>Item 1 - Sou o :first-child</li>
+                <li>Item 2 - Sou um item comum do meio</li>
+                <li>Item 3 - Sou o :last-child</li>
+            </ul>
+        </section>
+
+        <section class="bloco">
+            <h2>4. Comparação: span vs ::first-letter</h2>
+            <p class="sem-pseudoelemento">
+                <span class="primeira-letra">T</span>exto estilizando SEM pseudoelemento (precisou criar uma tag &lt;span&lt manual no HTML).
+            </p>
+
+            <p class="com-first-letter">
+                Texto estilizado COM pseudoelemento (::first-letter). O HTML fica 100% limpo!
+            </p>
+        </section>
+
+        <section class="bloco">
+            <h2>5. ::first-line e ::selection</h2>
+            <p class="texto-linha-selecao">
+                Este parágrafo demonstra dois recursos ao mesmo tempo: a <strong>primeira linha inteira</strong> está em azul e maiúsculo graças ao <code>::first-line</code> (experimente diminuir a largura da janela do navegador para ver a linha se recalculando sozinha!). Além disso, <strong>selecione qualquer trecho deste texto com o mouse</strong> para ver o <code>::selection</code> trocar a cor do destaque.
+            </p>
+        </section>
+
+        <section class="bloco">
+            <h2>6. ::before e ::after (Conteúdo visual)</h2>
+            <h3 class="titulo-decorado">Título com ::before e ::after</h3>
+            <p>
+                Link externo com selo automático:
+                <a href="https://developer.mozilla.org" target="_blank" class="link-externo">Documentação MDN</a>
+            </p>
+        </section>
+    
+    
+    
+    
+    </body>
+</html>

@@ -1,0 +1,116 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.bloco {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.caixa-hover {
+    background-color: #e0e7ff;
+    padding: 15px;
+    border: 1px solid #6366f1;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.caixa-hover:hover {
+    background-color: #1e1b4b;
+    color: #ffffff;
+    transform: translate(6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+}
+
+.botao-link {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+}
+
+.botao-link:active {
+    background-color: #dc2626;
+    transform: scale(0.96);
+}
+
+input[type="checkbox"]:checked + label {
+    color: #16a34a;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+.lista-exemplo li {
+    padding: 6px;
+}
+
+.lista-exemplo li:first-child{
+   background-color: #dcfce7;
+   border: 1px solid #013f17;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+   font-weight: bold; 
+}
+
+.lista-exemplo li:last-child {
+    background-color: #ffedd5;
+    border: 1px solid #4e2d01;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+}
+
+.sem-pseudoelemento, .com-first-letter {
+    font-size: 16px;
+    color: #222222;
+}
+
+.sem-pseudoelemento .primeira-letra {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.com-first-letter::first-letter {
+    font-size: 32px;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+.texto-linha-selecao {
+    line-height: 1.6;
+}
+
+.texto-linha-selecao::first-line {
+    color: #1d4ed8;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.texto-linha-selecao::selection {
+    background-color: #a200ff;
+    color: #ffffff;
+}
+
+.titulo-decorado::before {
+    content: "✨";
+    color: #eab308;
+}
+.titulo-decorado::after{
+    content: " (Novo)";
+    font-size: 14px;
+    color: #dc2626;
+}
+
+.link-externo::after {
+    content: " ↗";
+    font-weight: bold;
+    color: #2563eb;
+}
