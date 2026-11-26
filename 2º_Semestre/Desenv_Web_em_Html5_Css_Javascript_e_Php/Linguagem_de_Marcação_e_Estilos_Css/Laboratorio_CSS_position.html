@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratório: CSS Position</title>
+    <link rel="stylesheet" href="Laboratorio_CSS_position_style.css">
+</head>
+<body>
+    <header class="topo">
+        <h1>Laboratório de Posicionamento CSS</h1>
+        <p>Role a página para baixo para testar o Sticky e o fixed!</p>
+    </header>
+
+    <!--STICKY: rola junto até o enconstar no topo (top: 0) e gruda lá-->
+    <nav class="menu-sticky">
+        Menu sticky (Role a página: quando eu bater no topo eu grudo!)
+    </nav>
+
+    <main class="conteudo">
+        <section class="bloco">
+            <h2>1. Static vs Relative</h2>
+            <div class="caixa static">Caixa 1: position: static (fluxo normal)</div>
+            <div class="caixa relative">Caixa 2: position: relative (deslocada, mas deixou o buraco dela reservado!</div>
+            <div class="caixa static">Caixa 3: position: static (não subiu para o buraco da Caixa 2)</div>
+        </section>
+
+        <section class="bloco">
+            <h2>2. O combo perfeito: Pai Relative + Filho Absolute</h2>
+            <div class="cartao-produto">
+                <span class="etiqueta-oferta">50% OFF</span>
+                <h3>Tênis Esportivo</h3>
+                <p>A etiqueta vermelha está com <strong>position: absolute</strong> presa no canto superior direito deste cartão(que tem <strong>position: relative</strong>).</p>
+            </div>
+        </section>
+
+        <section class="bloco area-scroll">
+            <h2>3. Área de rolagem</h2>
+            <p>Continue rolando para ver o menu azul grudado no topo (sticky) e o botão verde parado no canto inferior direito (fixed)</p>
+        </section>
+    </main>
+
+    <a href="#" class="botao-fixed">Topo (fixed)</a>
+
+</body>
+</html>

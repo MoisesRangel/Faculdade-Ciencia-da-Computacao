@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    line-height: 1.5;
+}
+
+.topo {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 30px 20px;
+}
+
+.menu-sticky {
+    position: sticky;
+    top: 0;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 15px 20px;
+    z-index: 10;
+}
+
+.conteudo {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px
+}
+
+.bloco {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.bloco h2 {
+    margin-bottom: 15px;
+}
+
+.caixa {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #334155;
+    font-weight: bold; 
+}
+
+.static {
+    position: static;
+    background-color: #e2e8f0;
+}
+
+.relative {
+    position: relative;
+    top: 15px;
+    left: 30px;
+    background-color: #fef08a;
+    border-color: #ca8a04;
+}
+
+.cartao-produto {
+    position: relative;
+    width: 320px;
+    padding: 25px 20px 20px 20px;
+    background-color: #f8fafc;
+    border: 2px solid #943b89;
+    border-radius: 8px;
+}
+
+.etiqueta-oferta {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background-color: #dc2626;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.botao-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #16a34a;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight:bold;
+    padding: 12px 18px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.area-scroll {
+    height: 900px;
+}
